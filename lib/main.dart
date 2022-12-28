@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(ScheduleViewCustomization());
+void main() => runApp(const ScheduleViewCustomization());
 
 class ScheduleViewCustomization extends StatefulWidget {
+  const ScheduleViewCustomization({super.key});
+
   @override
   State<StatefulWidget> createState() => CustomizationState();
 }
@@ -19,7 +20,7 @@ class CustomizationState extends State<ScheduleViewCustomization> {
           child: SfCalendar(
             view: CalendarView.schedule,
             dataSource: getCalendarDataSource(),
-            scheduleViewSettings: ScheduleViewSettings(
+            scheduleViewSettings: const ScheduleViewSettings(
                 appointmentTextStyle: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
